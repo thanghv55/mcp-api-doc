@@ -18,4 +18,4 @@ name = "mcp-api-doc"
 version = "0.1.0"
 
 [project.scripts]
-mcp-api-doc = "server:main"
+mcp-api-doc = "src.server:main"
