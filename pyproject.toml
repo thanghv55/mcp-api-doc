@@ -1,21 +1,17 @@
-[tool.poetry]
-name = "mcp docs"
-version = "0.1.0"
-description = ""
-authors = ["Marky Hoang <thanghv2011@gmail.com>"]
-readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
 [project]
 name = "mcp-api-doc"
 version = "0.1.0"
+description = "MCP Server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests==2.32.3",
+    "mcp==1.9.0"
+]
 
 [project.scripts]
 mcp-api-doc = "src.server:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
