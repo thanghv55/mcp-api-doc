@@ -1,0 +1,27 @@
+[project]
+name = "mcp-api-doc"
+version = "0.1.0"
+description = "MCP Server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests==2.32.3",
+    "mcp==1.9.0",
+    "python-dotenv>=1.1.0",
+]
+
+[project.scripts]
+mcp-api-doc = "mcp_api_doc.server:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["mcp_api_doc"]
+
+
+[tool.mcp]
+id = "mcp-api-doc"
+entrypoint = "mcp_api_doc.server:main"
